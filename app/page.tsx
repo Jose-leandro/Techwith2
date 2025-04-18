@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <>
       <head>
-        <Image src={""} height={9} width={0} alt=""></Image>
+        <Image src="/logo" height={150} width={100} alt="Logo Of Website" />
 
         <button>
-          <Image src={""} height={0} width={0} alt=""></Image>
+          <Image src={""} height={0} width={0} alt="" />
         </button>
 
         <h1>Get Us Services</h1>
