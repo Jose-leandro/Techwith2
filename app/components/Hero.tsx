@@ -3,7 +3,7 @@ import React from "react";
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white text-center px-4">
-      <h1 className="text-6xl w-4/6 sm:text-5xl font-bold mb-4">
+      <h1 className="text-8xl w-4/6 sm:text-5xl font-bold mb-4">
         <span className="">TechWith2</span> – Landing Pages That Convert, Code
         That Performs.
       </h1>
