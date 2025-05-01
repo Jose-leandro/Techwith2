@@ -11,7 +11,7 @@ export default function Hero() {
           Let’s Build Your Page
         </a>
 
-        <span className="text-9xl">TechWith2</span>
+        <span className="text-9xl font-abril font-normal">TechWith2</span>
 
         <h1 className="text-7xl w-[700px] sm:text-5xl font-bold mb-4">
           – Landing Pages That Convert, Code That Performs.
