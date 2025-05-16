@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Hero from "./components/Hero";
 import AboutUs from "./components/about-us";
+import OurServices from "./components/our-services";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <main>
         <Hero />
         <AboutUs />
+        <OurServices />
       </main>
       <footer></footer>
     </>
