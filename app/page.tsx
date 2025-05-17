@@ -2,6 +2,7 @@ import Image from "next/image";
 import Hero from "./components/Hero";
 import AboutUs from "./components/about-us";
 import OurServices from "./components/our-services";
+import OurPromotionForYou from "./components/our-promotion-for-you";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Hero />
         <AboutUs />
         <OurServices />
+        <OurPromotionForYou />
       </main>
       <footer></footer>
     </>
