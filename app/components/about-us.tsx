@@ -8,8 +8,8 @@ export default function AboutUs() {
         About <span className="text-7xl font-abril">TechWith2</span>
       </h2>
 
-      <div className="flex justify-around w-full">
-        <p className="w-3/5 text-lg mt-3">
+      <div className="flex-col flex xl:flex xl:justify-around xl:w-full">
+        <p className="ml-2 w-3/5 text-lg mt-3">
           we believe that the first impression is everything — and that starts
           with a powerful landing page. Founded with a passion for clean design
           and real results, we help entrepreneurs, startups, and businesses
