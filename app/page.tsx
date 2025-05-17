@@ -7,7 +7,7 @@ import OurPromotionForYou from "./components/our-promotion-for-you";
 export default function Home() {
   return (
     <>
-      <head className="flex justify-around items-center">
+      <header className="flex justify-around items-center">
         <Image
           src="/logo.png"
           className="py-2"
@@ -19,7 +19,7 @@ export default function Home() {
         <button className="size-8 text-3xl text-white">=</button>
 
         <h1 className="text-white">Get Us Services</h1>
-      </head>
+      </header>
 
       <main>
         <Hero />
