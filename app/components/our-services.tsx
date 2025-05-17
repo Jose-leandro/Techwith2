@@ -7,20 +7,20 @@ export default function OurServices() {
       id: 1,
       title: "Web Development",
       description: "Building responsive and scalable websites.",
-      imageUrl: "/web-development.jpg",
+      imageUrl: "/logo.png",
     },
     {
       id: 2,
       title: "Mobile App Development",
       description: "Creating seamless and user-friendly mobile applications.",
-      imageUrl: "/mobile-app.jpg",
+      imageUrl: "/logo.png",
     },
     {
       id: 3,
       title: "UI/UX Design",
       description:
         "Designing intuitive and aesthetically pleasing user experiences.",
-      imageUrl: "/ui-ux.jpg",
+      imageUrl: "/logo.png",
     },
   ];
 
@@ -45,7 +45,7 @@ export default function OurServices() {
         {OurServices.map((service) => (
           <div
             key={service.id}
-            className="bg-black rounded-2xl mb-2 flex flex-col justify-evenly"
+            className="bg-black rounded-2xl px-6 py-7 mb-2 h-auto flex flex-col items-start justify-evenly"
           >
             <Image
               src={service.imageUrl}
@@ -53,9 +53,9 @@ export default function OurServices() {
               width={40}
               height={30}
             />
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
-            <button>Learn More</button>
+            <h3 className="text-base mt-1">{service.title}</h3>
+            <p className="text-xs my-3 mb-2">{service.description}</p>
+            <button>Learn More {">"}</button>
           </div>
         ))}
       </div>
