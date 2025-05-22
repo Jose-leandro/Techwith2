@@ -23,7 +23,7 @@ const contacts = [
 
 export default function Contact() {
   return (
-    <section className="mt-10 px-5">
+    <section className="mt-10 px-5 bg-gray-300 py-10">
       <h2 className="text-5xl font-abril mt-5 ml-3">
         Contact <span className="text-7xl font-abril">Us</span>
       </h2>

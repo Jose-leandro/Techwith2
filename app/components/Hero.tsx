@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <section className="sm:flex-col sm:flex-wrap min-h-screen flex justify-around items-center bg-gray-900 text-white text-center px-4">
+    <section className="flex-col h-auto flex justify-around items-center bg-gray-100 text-black text-center px-4 py-6 lg:flex">
       <div className="flex flex-col items-start w-auto">
         <a
           href="#contact"
@@ -11,14 +11,16 @@ export default function Hero() {
           Let’s Build Your Page
         </a>
 
-        <span className="sm:text-2xl text-9xl font-abril font-normal">TechWith2</span>
+        <span className="text-2xl lg:text-9xl font-abril font-normal">
+          TechWith2
+        </span>
 
-        <h1 className="text-7xl w-[700px] sm:text-5xl font-bold mb-4">
+        <h1 className="text-7xl w-[200px] sm:text-5xl font-bold mb-4 lg:w-[700px]">
           – Landing Pages That Convert, Code That Performs.
         </h1>
       </div>
 
-      <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mb-8">
+      <p className="text-lg sm:text-xl text-gray-800 max-w-2xl mb-8">
         We build high-performing, visually striking landing pages that bring
         your ideas to life and generate real results.
       </p>

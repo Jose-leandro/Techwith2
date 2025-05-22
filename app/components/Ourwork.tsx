@@ -27,7 +27,7 @@ const projects = [
 
 export default function OurWork() {
   return (
-    <section className="mt-3">
+    <section className="mt-6">
       <h2 className="text-5xl font-abril mt-5 ml-3">
         This is <span className="text-7xl font-abril"> the first</span>{" "}
         impression <span className="text-7xl font-abril">we crafted</span>

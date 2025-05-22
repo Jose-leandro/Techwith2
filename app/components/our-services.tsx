@@ -25,27 +25,27 @@ export default function OurServices() {
   ];
 
   return (
-    <section>
-      <div className="flex justify-between">
+    <section className="bg-gray-100 mt-10 mb-10 py-12">
+      <div className="flex justify-around items-center">
         <h2 className="text-5xl font-abril mt-5 ml-3">
           Our <span className="text-7xl font-abril">Services</span>
         </h2>
 
-        <button className="mr-3 rounded-sm h-7 w-auto px-3 bg-zinc-100 text-black">
+        <button className="mr-3 rounded-sm h-auto text-2xl w-auto px-3 py-3 bg-zinc-400 text-black">
           Get US Services
         </button>
       </div>
 
-      <p className="mt-2 ml-2">
+      <p className="mt-2 ml-7">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia inventore
         atque libero nisi quisquam vitae ipsam.
       </p>
 
-      <div className="flex justify-around mt-6">
+      <div className="flex justify-around mt-6 mb-3">
         {OurServices.map((service) => (
           <div
             key={service.id}
-            className="bg-black rounded-2xl px-6 py-7 mb-2 h-auto flex flex-col items-start justify-evenly"
+            className="bg-gray-200 rounded-2xl px-6 py-7 mb-2 h-auto flex flex-col items-start justify-evenly"
           >
             <Image
               src={service.imageUrl}

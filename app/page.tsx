@@ -9,18 +9,20 @@ import OurWork from "./components/Ourwork";
 export default function Home() {
   return (
     <>
-      <header className="flex justify-around items-center">
+      <header className="flex justify-around items-center lg:justify-around lg:items-center">
         <Image
           src="/logo.png"
-          className="py-2"
+          className="py-2 lg:py-2"
           height={80}
           width={60}
           alt="Logo Of Website"
         />
 
-        <button className="size-8 text-3xl text-white">=</button>
+        <button className="size-8 text-3xl text-black lg:size-8 lg:text-3xl">
+          =
+        </button>
 
-        <h1 className="text-white">Get Us Services</h1>
+        <h1 className="text-black underline">Get Us Services</h1>
       </header>
 
       <main>
