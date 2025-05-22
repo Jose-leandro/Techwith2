@@ -4,19 +4,19 @@ import React from "react";
 export default function AboutUs() {
   return (
     <section>
-      <h2 className="text-5xl font-abril mt-5 ml-3">
-        About <span className="text-7xl font-abril">TechWith2</span>
+      <h2 className="text-4xl font-abril mt-5 ml-4 lg:ml-3">
+        About <span className="text-5xl font-abril lg:text-7xl">TechWith2</span>
       </h2>
 
-      <div className="flex-col flex lg:flex lg:flex-row lg:justify-around lg:w-full">
-        <p className="ml-2 w-3/5 text-lg mt-3">
+      <div className="flex-col flex ml-4 lg:ml-0 lg:flex lg:flex-row lg:justify-around lg:w-full">
+        <p className="ml-2 w-auto text-base mt-3 lg:text-lg lg:w-3/5">
           we believe that the first impression is everything — and that starts
           with a powerful landing page. Founded with a passion for clean design
           and real results, we help entrepreneurs, startups, and businesses
           stand out online through modern, high-performance web experiences.
         </p>
 
-        <div className="bg-gray-100 p-6 rounded-xl shadow-sm w-1/3">
+        <div className="bg-gray-100 p-6 rounded-xl shadow-sm w-auto lg:w-1/3">
           <h3 className="text-xl font-bold text-gray-800 mb-2">
             🚀 Our Mission
           </h3>
