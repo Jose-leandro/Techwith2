@@ -2,10 +2,10 @@ import React from "react";
 
 const contacts = [
   {
-    typeContact: "Email",
+    typeContact: "Instagram",
     howContact: "contact@techwith2.com",
-    conect: "Send Email",
-    href: "mailto:contact@techwith2.com",
+    conect: "Send One Messagem",
+    href: "",
   },
   {
     typeContact: "WhatsApp",
@@ -28,35 +28,83 @@ export default function Contact() {
         Contact <span className="text-7xl font-abril">Us</span>
       </h2>
 
-      <div className="flex flex-col flex-wrap gap-6 mt-2 w-2/4">
-        <div className="w-full mb-4">
-          <h3 className="text-2xl font-semibold">
-            Let's Build Something Great Together
-          </h3>
+      <div className="flex justify-between w-full mt-12">
+        <div className="flex flex-col flex-wrap gap-6 ml-6 w-1/3">
+          <div className="w-full mb-4">
+            <h3 className="text-2xl">Let's Build Something Great Together</h3>
+          </div>
+
+          {contacts.map((contact, index) => (
+            <div
+              key={index}
+              className="flex-1 w-2/3 border rounded-2xl p-4 shadow-md hover:shadow-lg transition duration-300"
+            >
+              <h3 className="text-xl font-semibold mb-2">
+                {contact.typeContact}
+              </h3>
+              <p className="text-gray-600 mb-4">{contact.howContact}</p>
+              <a
+                href={contact.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+              >
+                {contact.conect}
+              </a>
+            </div>
+          ))}
         </div>
 
-        {contacts.map((contact, index) => (
-          <div
-            key={index}
-            className="flex-1 w-aut border rounded-2xl p-5 shadow-md hover:shadow-lg transition duration-300"
-          >
-            <h3 className="text-xl font-semibold mb-2">
-              {contact.typeContact}
-            </h3>
-            <p className="text-gray-600 mb-4">{contact.howContact}</p>
-            <a
-              href={contact.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-            >
-              {contact.conect}
-            </a>
-          </div>
-        ))}
-      </div>
+        <form className="bg-gray-200 p-6 shadow-lg w-2/4 space-y-4">
+          <h3 className="text-black text-xl">Send Us a Message</h3>
 
-      <div></div>
+          <div className="flex flex-col">
+            <label htmlFor="name" className="text-black mb-1">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              className="p-2 rounded-md border border-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+
+          <div className="flex flex-col">
+            <label htmlFor="email" className="text-black mb-1">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              className="p-2 rounded-md border border-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+
+          <div className="flex flex-col">
+            <label htmlFor="message" className="text-black mb-1">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows={4}
+              required
+              className="p-2 rounded-md border border-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
     </section>
   );
 }
