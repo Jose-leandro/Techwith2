@@ -4,6 +4,7 @@ import AboutUs from "./components/about-us";
 import OurServices from "./components/our-services";
 import OurPromotionForYou from "./components/our-promotion-for-you";
 import Contact from "./components/Contact";
+import OurWork from "./components/Ourwork";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <OurServices />
         <OurPromotionForYou />
         <Contact />
+        <OurWork />
       </main>
       <footer></footer>
     </>
