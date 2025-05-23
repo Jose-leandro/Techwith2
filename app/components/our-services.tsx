@@ -26,12 +26,13 @@ export default function OurServices() {
 
   return (
     <section className="bg-gray-100 mt-10 mb-10 py-12">
-      <div className="flex justify-around items-center">
-        <h2 className="text-5xl font-abril mt-5 ml-3">
-          Our <span className="text-7xl font-abril">Services</span>
+      <div className="flex justify-around items-center ml-3 lg:ml-0">
+        <h2 className="text-4xl font-abril mt-5 ml-3 lg:text-7xl">
+          Our{" "}
+          <span className="text-5xl font-abril4 lg:text-7xl ">Services</span>
         </h2>
 
-        <button className="mr-3 rounded-sm h-auto text-2xl w-auto px-3 py-3 bg-zinc-400 text-black">
+        <button className="mr-3 rounded-sm h-auto w-72 text-xl px-1 py-1 bg-zinc-400 text-black lg:w-auto lg:px-3 lg:py-3 lg:text-2xl">
           Get US Services
         </button>
       </div>
