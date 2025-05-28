@@ -5,22 +5,9 @@ export default function OurServices() {
   const OurServices = [
     {
       id: 1,
-      title: "Web Development",
-      description: "Building responsive and scalable websites.",
-      imageUrl: "/logo.png",
-    },
-    {
-      id: 2,
-      title: "Mobile App Development",
-      description: "Creating seamless and user-friendly mobile applications.",
-      imageUrl: "/logo.png",
-    },
-    {
-      id: 3,
-      title: "UI/UX Design",
-      description:
-        "Designing intuitive and aesthetically pleasing user experiences.",
-      imageUrl: "/logo.png",
+      title: "Landing Pages",
+      description: "Building responsive and scalable Landing pages.",
+      imageUrl: "/our-services.jpg",
     },
   ];
 
@@ -37,7 +24,7 @@ export default function OurServices() {
         </button>
       </div>
 
-      <p className="mt-2 ml-7">
+      <p className="mt-2 ml-7 mb-4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia inventore
         atque libero nisi quisquam vitae ipsam.
       </p>
@@ -46,17 +33,20 @@ export default function OurServices() {
         {OurServices.map((service) => (
           <div
             key={service.id}
-            className="bg-gray-200 rounded-2xl px-6 py-7 mb-2 h-auto flex flex-col items-start justify-evenly"
+            className="bg-gray-200 rounded-2xl px-6 py-7 w-auto mb-2 h-auto flex items-start justify-evenly"
           >
             <Image
               src={service.imageUrl}
               alt={service.title}
-              width={40}
-              height={30}
+              width={450}
+              height={350}
             />
-            <h3 className="text-base mt-1">{service.title}</h3>
-            <p className="text-xs my-3 mb-2">{service.description}</p>
-            <button>Learn More {">"}</button>
+
+            <div className="flex flex-col justify-evenly items-start ml-5">
+              <h3 className="mt-1 text-3xl">{service.title}</h3>
+              <p className="text-base my-3 mt-4 mb-2">{service.description}</p>
+              <button>Learn More {">"}</button>
+            </div>
           </div>
         ))}
       </div>
