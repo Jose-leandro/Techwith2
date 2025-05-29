@@ -20,18 +20,21 @@ export default function OurPromotionForYou() {
   ];
   return (
     <section className="py-12">
-      <h2 className="text-5xl font-abril mt-5 ml-3">
-        Our <span className="text-7xl font-abril">Promotion</span> For{" "}
-        <span className="text-7xl font-abril">Your</span>
+      <h2 className="text-4xl font-abril w-1/2 mt-5 ml-3 lg:text-5xl lg:w-auto">
+        Our <span className="text-5xl font-abril lg:text-7xl">Promotion</span>{" "}
+        For <span className="text-5xl font-abril lg:text-7xl">Your</span>
       </h2>
 
-      <div className="flex justify-around mt-6">
+      <div className="flex flex-col justify-around mt-6 lg:flex-row">
         {OurPomotion.map((service) => (
           <div className={`flex ${service.style} items-center`}>
             <h3 className="text-4xl mt-1 mb-2">{service.title}</h3>
 
-            <div key={service.id} className="flex items-center justify-center">
-              <div className="bg-gray-300 rounded-2xl px-6 py-7 w-2/5 mb-2 h-auto flex flex-col items-start justify-evenly lg:w-4/5">
+            <div
+              key={service.id}
+              className="flex items-center justify-center mt-4 lg:mt-0"
+            >
+              <div className="bg-gray-300 rounded-2xl px-6 py-7 w-4/5 mb-2 h-auto flex flex-col items-start justify-evenly">
                 <p className="text-1xs my-3 mb-2 text-black">
                   {service.description}
                 </p>

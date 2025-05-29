@@ -24,12 +24,12 @@ const contacts = [
 export default function Contact() {
   return (
     <section className="mt-10 px-5 bg-gray-300 py-10">
-      <h2 className="text-5xl font-abril mt-5 ml-3">
-        Contact <span className="text-7xl font-abril">Us</span>
+      <h2 className="text-4xl font-abril mt-5 ml-3 lg:text-5xl">
+        Contact <span className="text-5xl font-abril lg:text-7xl">Us</span>
       </h2>
 
-      <div className="flex justify-between w-full mt-12">
-        <div className="flex flex-col flex-wrap gap-6 ml-6 w-1/3">
+      <div className="flex-col justify-between w-full mt-12 lg:flex-row lg:flex">
+        <div className="flex flex-col flex-wrap w-auto mb-3 gap-6 ml-6 lg:w-1/3 lg:mb-0">
           <div className="w-full mb-4">
             <h3 className="text-2xl">Let's Build Something Great Together</h3>
           </div>
@@ -37,7 +37,7 @@ export default function Contact() {
           {contacts.map((contact, index) => (
             <div
               key={index}
-              className="flex-1 w-2/3 border rounded-2xl p-4 shadow-md hover:shadow-lg transition duration-300"
+              className="flex-1 w-auto border rounded-2xl p-4 shadow-md hover:shadow-lg transition duration-300 md:w-1/3 lg:w-4/5"
             >
               <h3 className="text-xl font-semibold mb-2">
                 {contact.typeContact}
@@ -55,7 +55,7 @@ export default function Contact() {
           ))}
         </div>
 
-        <form className="bg-gray-200 p-6 shadow-lg w-2/4 space-y-4">
+        <form className="bg-gray-200 p-6 shadow-lg w-auto space-y-4 mt-7 lg:mt-0 lg:w-2/4">
           <h3 className="text-black text-xl">Send Us a Message</h3>
 
           <div className="flex flex-col">

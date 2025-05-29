@@ -4,11 +4,14 @@ import React from "react";
 export default function AboutUs() {
   return (
     <section>
-      <h2 className="text-4xl font-abril mt-5 ml-4 lg:ml-3">
-        About <span className="text-5xl font-abril lg:text-7xl">TechWith2</span>
+      <h2 className="w-11/12 text-4xl font-abril mt-5 ml-4 lg:ml-3 lg:w-auto">
+        About{" "}
+        <span className="w-11/12 text-5xl font-abril lg:text-7xl lg:w-auto">
+          TechWith2
+        </span>
       </h2>
 
-      <div className="flex-col flex ml-4 lg:ml-0 lg:flex lg:flex-row lg:justify-around lg:w-full">
+      <div className="w-11/12 flex-col flex ml-4 lg:ml-0 lg:flex lg:flex-row lg:flex-wrap lg:justify-around lg:w-full">
         <p className="ml-2 w-auto text-base mt-3 lg:text-lg lg:w-3/5">
           we believe that the first impression is everything — and that starts
           with a powerful landing page. Founded with a passion for clean design
@@ -48,7 +51,7 @@ export default function AboutUs() {
           </p>
         </div>
 
-        <p className="w-[450px] text-lg">
+        <p className="w-full text-lg">
           What makes TechWith2 different is our focus on both aesthetic and
           performance. We use cutting-edge technologies like React, Next.js, and
           Tailwind CSS to create lightning-fast, responsive landing pages built

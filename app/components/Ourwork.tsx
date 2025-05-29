@@ -28,9 +28,11 @@ const projects = [
 export default function OurWork() {
   return (
     <section className="mt-6">
-      <h2 className="text-5xl font-abril mt-5 ml-3">
-        This is <span className="text-7xl font-abril"> the first</span>{" "}
-        impression <span className="text-7xl font-abril">we crafted</span>
+      <h2 className="text-4xl font-abril mt-5 ml-3 w-auto lg:text-5xl">
+        This is{" "}
+        <span className="text-5xl font-abril lg:text-7xl"> the first</span>{" "}
+        impression{" "}
+        <span className="text-5xl font-abril lg:text-7xl">we crafted</span>
       </h2>
 
       <p className="text-lg text-gray-600 mt-2 ml-2">
@@ -38,11 +40,11 @@ export default function OurWork() {
         to drive results and elevate your brand.
       </p>
 
-      <div className="grid md:grid-cols-3 gap-8 mt-10">
+      <div className="flex flex-wrap justify-center gap-8 mt-10 lg:w-auto">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300"
+            className="rounded-xl w-11/12 md:w-[30%] overflow-hidden shadow-lg hover:shadow-xl transition duration-300 lg:w-1/2"
           >
             <img
               src={project.image}

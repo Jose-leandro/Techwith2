@@ -13,13 +13,13 @@ export default function OurServices() {
 
   return (
     <section className="bg-gray-100 mt-10 mb-10 py-12">
-      <div className="flex justify-around items-center ml-3 lg:ml-0">
-        <h2 className="text-4xl font-abril mt-5 ml-3 lg:text-7xl">
+      <div className="flex flex-col ml-3 lg:ml-0 lg:flex lg:flex-row lg:justify-around lg:items-center">
+        <h2 className="text-4xl font-abril mt-5 ml-3 mb-5 lg:text-7xl lg:mb-0">
           Our{" "}
           <span className="text-5xl font-abril4 lg:text-7xl ">Services</span>
         </h2>
 
-        <button className="mr-3 rounded-sm h-auto w-72 text-xl px-1 py-1 bg-zinc-400 text-black lg:w-auto lg:px-3 lg:py-3 lg:text-2xl">
+        <button className="ml-5 rounded-sm h-auto w-1/2 mt-2 mb-6 text-xl px-1 py-1 bg-zinc-400 text-black lg:px-3 lg:py-3 lg:text-2xl lg:w-72 lg:mt-0 lg:mb-0">
           Get US Services
         </button>
       </div>
@@ -33,11 +33,12 @@ export default function OurServices() {
         {OurServices.map((service) => (
           <div
             key={service.id}
-            className="bg-gray-200 rounded-2xl px-6 py-7 w-auto mb-2 h-auto flex items-start justify-evenly"
+            className="bg-gray-200 rounded-2xl px-6 py-7 w-11/12 mb-2 h-auto flex-col items-start justify-evenly lg:flex lg:flex-row lg:w-auto"
           >
             <Image
               src={service.imageUrl}
               alt={service.title}
+              className="w-3/4 lg:w-[450px]"
               width={450}
               height={350}
             />
