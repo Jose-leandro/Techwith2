@@ -12,7 +12,7 @@ export default function AboutUs() {
       </h2>
 
       <div className="w-11/12 flex-col flex ml-4 lg:ml-0 lg:flex lg:flex-row lg:flex-wrap lg:justify-around lg:w-full">
-        <p className="ml-2 w-auto text-base mt-3 lg:text-lg lg:w-3/5">
+        <p className="ml-2 w-auto text-base mt-3 mb-4 lg:text-lg lg:w-3/5 lg:mb-0">
           we believe that the first impression is everything — and that starts
           with a powerful landing page. Founded with a passion for clean design
           and real results, we help entrepreneurs, startups, and businesses
