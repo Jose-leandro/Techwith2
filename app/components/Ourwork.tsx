@@ -28,7 +28,7 @@ const projects = [
 export default function OurWork() {
   return (
     <section className="mt-6">
-      <h2 className="text-4xl font-abril mt-5 ml-3 w-auto lg:text-5xl">
+      <h2 className="text-4xl font-abril mt-5 ml-3 w-auto text-gray-800 lg:text-5xl">
         This is{" "}
         <span className="text-5xl font-abril lg:text-7xl"> the first</span>{" "}
         impression{" "}
@@ -52,7 +52,7 @@ export default function OurWork() {
               className="w-full h-48 object-cover"
             />
             <div className="p-4 bg-white">
-              <h3 className="text-xl font-bold mb-2">{project.name}</h3>
+              <h3 className="text-xl font-bold mb-2 text-gray-800">{project.name}</h3>
               <p className="text-gray-600 mb-4">{project.description}</p>
               {project.link && (
                 <a

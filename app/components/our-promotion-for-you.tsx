@@ -20,15 +20,20 @@ export default function OurPromotionForYou() {
   ];
   return (
     <section className="py-12">
-      <h2 className="text-4xl font-abril w-1/2 mt-5 ml-3 lg:text-5xl lg:w-auto">
+      <h2 className="text-4xl font-abril w-1/2 mt-5 ml-3 text-gray-800 lg:text-5xl lg:w-auto">
         Our <span className="text-5xl font-abril lg:text-7xl">Promotion</span>{" "}
         For <span className="text-5xl font-abril lg:text-7xl">Your</span>
       </h2>
 
       <div className="flex flex-col justify-around mt-6 lg:flex-row">
         {OurPomotion.map((service) => (
-          <div className={`flex ${service.style} items-center`}>
-            <h3 className="text-4xl mt-1 mb-2">{service.title}</h3>
+          <div
+            key={service.id}
+            className={`flex ${service.style} items-center`}
+          >
+            <h3 className="text-4xl mt-1 mb-2 text-gray-800">
+              {service.title}
+            </h3>
 
             <div
               key={service.id}

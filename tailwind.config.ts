@@ -14,6 +14,8 @@ export default {
       },
       fontFamily: {
         abril: ['"Abril Fatface"', "serif"],
+        garamond: ['"EB Garamond"', "serif"],
+        ibmplex: ['"IBM Plex Serif"', "serif"],
       },
     },
   },

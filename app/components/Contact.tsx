@@ -24,14 +24,16 @@ const contacts = [
 export default function Contact() {
   return (
     <section className="mt-10 px-5 bg-gray-300 py-10">
-      <h2 className="text-4xl font-abril mt-5 ml-3 lg:text-5xl">
+      <h2 className="text-4xl font-abril mt-5 ml-3  text-gray-800 lg:text-5xl">
         Contact <span className="text-5xl font-abril lg:text-7xl">Us</span>
       </h2>
 
       <div className="flex-col justify-between w-full mt-12 lg:flex-row lg:flex">
         <div className="flex flex-col flex-wrap w-auto mb-3 gap-6 ml-6 lg:w-1/3 lg:mb-0">
           <div className="w-full mb-4">
-            <h3 className="text-2xl">Let's Build Something Great Together</h3>
+            <h3 className="text-2xl text-gray-800">
+              Let's Build Something Great Together
+            </h3>
           </div>
 
           {contacts.map((contact, index) => (
@@ -39,7 +41,7 @@ export default function Contact() {
               key={index}
               className="flex-1 w-auto border rounded-2xl p-4 shadow-md hover:shadow-lg transition duration-300 md:w-1/3 lg:w-4/5"
             >
-              <h3 className="text-xl font-semibold mb-2">
+              <h3 className="text-xl font-semibold mb-2 text-gray-800">
                 {contact.typeContact}
               </h3>
               <p className="text-gray-600 mb-4">{contact.howContact}</p>
