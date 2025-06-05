@@ -6,21 +6,21 @@ const projects = [
     name: "Strellar",
     description:
       "A modern landing page built for a tech startup focused on digital innovation.",
-    image: "public/Strellar.png",
+    image: "/img/Strellar.png",
     link: "https://strellar.tech",
   },
   {
     name: "Upload AI",
     description:
       "AI-driven file sharing and storage service with a clean, minimal UI.",
-    image: "/images/uploadai.png",
+    image: "/img/uploadAi.jpeg",
     link: "https://uploadai.io",
   },
   {
     name: "Gedf",
     description:
       "Landing page created for a global education funding platform.",
-    image: "/images/gedf.png",
+    image: "/img/gedf.jpeg",
     link: "https://gedf.org",
   },
 ];
