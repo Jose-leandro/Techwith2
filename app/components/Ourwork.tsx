@@ -6,8 +6,8 @@ const projects = [
     name: "Strellar",
     description:
       "A modern landing page built for a tech startup focused on digital innovation.",
-    image: "/images/strellar.png", // Replace with your real path
-    link: "https://strellar.tech", // Optional
+    image: "public/Strellar.png",
+    link: "https://strellar.tech",
   },
   {
     name: "Upload AI",
@@ -40,7 +40,7 @@ export default function OurWork() {
         to drive results and elevate your brand.
       </p>
 
-      <div className="flex flex-wrap justify-center gap-8 mt-10 lg:w-auto">
+      <div className="flex flex-wrap justify-center gap-8 mt-10 lg:w-auto lg:flex-nowrap">
         {projects.map((project, index) => (
           <div
             key={index}
