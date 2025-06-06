@@ -19,13 +19,13 @@ export default function Header() {
 
       {/* Navigation Links */}
       <div className="flex items-center space-x-6">
-        <h1 className="text-black underline">Get Us Services</h1>
+        <h1 className="text-black underline font-semibold">Get Us Services</h1>
 
         <Link
           href="/blog"
           className="text-black underline hover:text-blue-800 transition duration-200"
         >
-          <h2 className="text-xl font-semibold">Our Blog</h2>
+          <h2 className="font-semibold">Our Blog</h2>
         </Link>
       </div>
     </header>

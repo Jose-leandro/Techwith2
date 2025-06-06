@@ -1,20 +1,20 @@
 // import Divider from "../app/components/divider";
 // import CategoryCard from "../app/components/categoryCard";
 import Divider from "@/app/components/divider";
-import Header from "../app/components/header";
+import Header from "../components/header";
 import Head from "next/head";
 import Footer from "@/app/components/footer";
 import CategoryCard from "@/app/components/categoryCard";
 
 const categories = [
-  { title: "Programming", src: "/programming.jpg", alt: "Programming" },
+  { title: "Programming", src: "/img/programming.jpg", alt: "Programming" },
   {
     title: "App & Tools Recommendations",
-    src: "/app-e-tools-recommendations.jpg",
+    src: "/img/app-e-tools-recommendations.jpg",
     alt: "App & Tools Recommendations",
   },
-  { title: "Tech Reviews", src: "/tech-reviews.jpg", alt: "Tech Reviews" },
-  { title: "Tech News", src: "/tech-news.jpg", alt: "Tech News" },
+  { title: "Tech Reviews", src: "/img/tech-reviews.jpg", alt: "Tech Reviews" },
+  { title: "Tech News", src: "/img/tech-news.jpg", alt: "Tech News" },
 ];
 
 export default function Index() {
