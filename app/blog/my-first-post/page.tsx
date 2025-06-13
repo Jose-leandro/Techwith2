@@ -3,6 +3,7 @@ import Footer from "@/app/components/footer";
 import Header from "@/app/components/header";
 import Image from "next/image";
 import Head from "next/head";
+import { LuCalendarDays } from "react-icons/lu";
 
 type PostType = {
   type: string;
@@ -25,21 +26,21 @@ type PostDate = {
 
 const PostData: PostDate[] = [
   {
-    img: "/photoOfAuthor.png",
+    img: "/img/photoOfAuthor.png",
     alt: "Image of Author",
     imgRight: "right-40",
     description: "José Leandro",
     textRight: "right-20",
   },
   {
-    img: "/calendar.png",
+    img: "/img/icons8-calendar-32.png",
     alt: "Image of Calendar",
     imgRight: "right-60",
     description: "25 Of April Of 2025",
     textRight: "right-36",
   },
   {
-    img: "/calendar.png",
+    img: "/img/icons8-passado-32.png",
     alt: "Image of Time",
     imgRight: "right-60",
     description: "8 minutes",
@@ -115,10 +116,10 @@ export default function MyFirstPost() {
 
           <Image
             className="z-0 absolute top-5 right-16"
-            src={""}
+            src="/img/Strellar.png"
             width={400}
             height={350}
-            alt=""
+            alt="Image for the blog post"
           />
 
           <div className="w-[400px] h-[400px] mr-12 flex flex-col justify-evenly">
