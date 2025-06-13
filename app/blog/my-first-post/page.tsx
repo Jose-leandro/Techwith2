@@ -21,6 +21,7 @@ type PostDate = {
   alt: string;
   imgRight: string;
   description: string;
+  style: string;
   textRight: string;
 };
 
@@ -29,6 +30,7 @@ const PostData: PostDate[] = [
     img: "/img/photoOfAuthor.png",
     alt: "Image of Author",
     imgRight: "right-40",
+    style: "w-36",
     description: "José Leandro",
     textRight: "right-20",
   },
@@ -36,15 +38,26 @@ const PostData: PostDate[] = [
     img: "/img/icons8-calendar-32.png",
     alt: "Image of Calendar",
     imgRight: "right-60",
-    description: "25 Of April Of 2025",
+    style: "w-36",
+    description: "25/04/2025",
     textRight: "right-36",
   },
   {
     img: "/img/icons8-passado-32.png",
     alt: "Image of Time",
     imgRight: "right-60",
+    style: "w-20",
     description: "8 minutes",
     textRight: "right-36",
+  },
+];
+
+const postDateNav = [
+  {
+    option1: "Introduction",
+    option2: "advantes",
+    option3: "Desvatens",
+    option4: "Conclusion",
   },
 ];
 
@@ -126,21 +139,40 @@ export default function MyFirstPost() {
             <div className="h-5/6"></div>
             <div className="flex">
               {PostData.map((element) => (
-                <div className="w-auto flex h-8" key={element.img}>
+                <div className="w-auto flex h-8 ml-2" key={element.img}>
                   <Image
-                    className="rounded ml-2"
+                    className="rounded"
                     src={element.img}
                     alt={element.alt}
                     width={25}
-                    height={25}
+                    height={18}
                   />
 
-                  <span className=" bg-slate-800 text-base text-white rounded-full py-1 px-2 mt-1">
+                  <span
+                    className={`bg-slate-800 w-40 ml-1 text-base text-white rounded-full py-1 px-2 mt-1 ${element.style}`}
+                  >
                     {element.description}
                   </span>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="flex flex-col justify-evenly">
+          <div className="w-1/2">
+            <h2>
+              So, we are in 2025, and JavaThe scrip continues for years and
+              years as one of the most popular and desired languages for learn
+              and choosing for the life of Millions of developers around the
+              world, this shows the Dimensions of JavaScript.
+            </h2>
+          </div>
+
+          <div className="w-1/4 bg-slate-300 rounded-sm">
+            {postDateNav.map(() => {
+              <></>;
+            })}
           </div>
         </section>
       </main>
