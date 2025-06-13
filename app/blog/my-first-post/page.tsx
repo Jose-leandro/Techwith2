@@ -128,11 +128,11 @@ export default function MyFirstPost() {
               {PostData.map((element) => (
                 <div className="w-auto flex h-8" key={element.img}>
                   <Image
-                    className=""
+                    className="rounded ml-2"
                     src={element.img}
                     alt={element.alt}
-                    width={20}
-                    height={20}
+                    width={25}
+                    height={25}
                   />
 
                   <span className=" bg-slate-800 text-base text-white rounded-full py-1 px-2 mt-1">
