@@ -54,10 +54,16 @@ const PostData: PostDate[] = [
 
 const postDateNav = [
   {
-    option1: "Introduction",
-    option2: "advantes",
-    option3: "Desvatens",
-    option4: "Conclusion",
+    option: "Introduction",
+  },
+  {
+    option: "advantes",
+  },
+  {
+    option: "Desvatens",
+  },
+  {
+    option: "Conclusion",
   },
 ];
 
@@ -159,7 +165,7 @@ export default function MyFirstPost() {
           </div>
         </section>
 
-        <section className="flex flex-col justify-evenly">
+        <section className="flex justify-evenly mt-12">
           <div className="w-1/2">
             <h2>
               So, we are in 2025, and JavaThe scrip continues for years and
@@ -169,10 +175,16 @@ export default function MyFirstPost() {
             </h2>
           </div>
 
-          <div className="w-1/4 bg-slate-300 rounded-sm">
-            {postDateNav.map(() => {
-              <></>;
-            })}
+          <div className="w-1/4 bg-stone-700 rounded-sm py-4">
+            {postDateNav.map((element, index) => (
+              <>
+                <div key={index} className="w-full flex justify-between">
+                  <h3 className="ml-4 text-white">{element.option}</h3>
+                  <span className="size-4 mr-2  text-white">→</span>
+                </div>
+                <div className="w-auto mx-4 h-[1px] bg-black my-2" />
+              </>
+            ))}
           </div>
         </section>
       </main>
