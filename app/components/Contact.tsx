@@ -36,25 +36,27 @@ export default function Contact() {
             </h3>
           </div>
 
-          {contacts.map((contact, index) => (
-            <div
-              key={index}
-              className="flex-1 w-auto border rounded-2xl p-4 shadow-md hover:shadow-lg transition duration-300 md:w-1/3 lg:w-4/5"
-            >
-              <h3 className="text-xl font-semibold mb-2 text-gray-800">
-                {contact.typeContact}
-              </h3>
-              <p className="text-gray-600 mb-4">{contact.howContact}</p>
-              <a
-                href={contact.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+          <div className="md:flex md:w-full lg:flex-col">
+            {contacts.map((contact, index) => (
+              <div
+                key={index}
+                className="flex-1 w-auto border rounded-2xl p-4 shadow-md hover:shadow-lg transition duration-300 md:w-1/3 lg:mt-1 lg:w-4/5"
               >
-                {contact.conect}
-              </a>
-            </div>
-          ))}
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                  {contact.typeContact}
+                </h3>
+                <p className="text-gray-600 mb-4">{contact.howContact}</p>
+                <a
+                  href={contact.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+                >
+                  {contact.conect}
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
 
         <form className="bg-gray-200 p-6 shadow-lg w-auto space-y-4 mt-7 lg:mt-0 lg:w-2/4">
