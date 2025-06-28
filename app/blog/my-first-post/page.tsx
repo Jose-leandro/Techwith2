@@ -102,6 +102,23 @@ export default function MyFirstPost() {
           name="twitter:description"
           content="Discover why JavaScript remains one of the most powerful programming languages. Learn its importance and how it shapes modern web development."
         />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              headline: "My First Post",
+              description: "Short summary...",
+              author: {
+                "@type": "Person",
+                name: "José Leandro",
+              },
+              datePublished: "0000-00-00",
+            }),
+          }}
+        />
       </Head>
 
       <Header />
