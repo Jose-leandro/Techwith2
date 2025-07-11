@@ -3,7 +3,6 @@ import Footer from "@/app/components/footer";
 import Header from "@/app/components/header";
 import Image from "next/image";
 import Head from "next/head";
-import { LuCalendarDays } from "react-icons/lu";
 
 type PostType = {
   type: string;

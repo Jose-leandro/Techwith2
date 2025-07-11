@@ -32,7 +32,7 @@ export default function Contact() {
         <div className="flex flex-col flex-wrap w-auto mb-3 gap-6 ml-6 lg:w-1/3 lg:mb-0">
           <div className="w-full mb-4">
             <h3 className="text-2xl text-gray-800">
-              Let's Build Something Great Together
+              Let&apos;s Build Something Great Together
             </h3>
           </div>
 

@@ -46,13 +46,17 @@ export default function OurWork() {
             key={index}
             className="rounded-xl w-11/12 md:w-[30%] overflow-hidden shadow-lg hover:shadow-xl transition duration-300 lg:w-1/2"
           >
-            <img
+            <Image
               src={project.image}
               alt={project.name}
+              width={600}
+              height={200}
               className="w-full h-48 object-cover"
             />
             <div className="p-4 bg-white">
-              <h3 className="text-xl font-bold mb-2 text-gray-800">{project.name}</h3>
+              <h3 className="text-xl font-bold mb-2 text-gray-800">
+                {project.name}
+              </h3>
               <p className="text-gray-600 mb-4">{project.description}</p>
               {project.link && (
                 <a
