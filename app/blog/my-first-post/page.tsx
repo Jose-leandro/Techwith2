@@ -5,17 +5,19 @@ import Image from "next/image";
 import Head from "next/head";
 
 type PostType = {
+  id: number;
   type: string;
   left: string;
 };
 
 const TypeOfPost: PostType[] = [
-  { type: "Programming", left: "left-12" },
-  { type: "JavaScript", left: "left-44" },
-  { type: "Language Of Programming", left: "left-72" },
+  { id: 1, type: "Programming", left: "left-12" },
+  { id: 2, type: "JavaScript", left: "left-44" },
+  { id: 3, type: "Language Of Programming", left: "left-72" },
 ];
 
 type PostDate = {
+  id: number;
   img: string;
   alt: string;
   imgRight: string;
@@ -26,6 +28,7 @@ type PostDate = {
 
 const PostData: PostDate[] = [
   {
+    id: 1,
     img: "/img/photoOfAuthor.png",
     alt: "Image of Author",
     imgRight: "right-40",
@@ -34,6 +37,7 @@ const PostData: PostDate[] = [
     textRight: "right-20",
   },
   {
+    id: 2,
     img: "/img/icons8-calendar-32.png",
     alt: "Image of Calendar",
     imgRight: "right-60",
@@ -42,6 +46,7 @@ const PostData: PostDate[] = [
     textRight: "right-36",
   },
   {
+    id: 3,
     img: "/img/icons8-passado-32.png",
     alt: "Image of Time",
     imgRight: "right-60",
@@ -52,19 +57,12 @@ const PostData: PostDate[] = [
 ];
 
 const postDateNav = [
-  {
-    option: "Introduction",
-  },
-  {
-    option: "advantes",
-  },
-  {
-    option: "Desvatens",
-  },
-  {
-    option: "Conclusion",
-  },
+  { id: 1, option: "Introduction" },
+  { id: 2, option: "advantes" },
+  { id: 3, option: "Desvatens" },
+  { id: 4, option: "Conclusion" },
 ];
+
 
 export default function MyFirstPost() {
   return (
@@ -125,14 +123,14 @@ export default function MyFirstPost() {
       <main>
         <section className="flex justify-end relative h-96">
           <div>
-            <h1 className="text-4xl font-ibmplex ml-3 w-3/4 absolute top-32 left-12 z-10">
+            <h1 className="text-4xl font-ibmplex ml-3 w-1/2 absolute top-32 left-12 z-10">
               Why <span className="font-garamond text-5xl">JavaScript</span>{" "}
               Remains One of the Most{" "}
               <span className="font-garamond text-5xl">Powerful</span> Languages
               in the World
             </h1>
 
-            <p className="mt-1 absolute top-56 left-12 w-3/4">
+            <p className="mt-1 absolute top-56 left-12 w-1/2">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos iure
               a nihil, fugiat officia mollitia deserunt ipsum? Impedit numquam
               nesciunt eius ullam magnam minima obcaecati, ad, expedita fugit
@@ -141,8 +139,8 @@ export default function MyFirstPost() {
 
             {TypeOfPost.map((element) => (
               <span
-                key={element.type}
-                className={`className=" bg-slate-800 text-white rounded-full py-1 px-2 mt-1 mx-4 absolute top-72 ${element.left} `}
+                key={element.id}
+                className={`className=" bg-slate-600 text-white rounded-full py-1 px-2 mt-1 mx-4 absolute top-72 ${element.left} `}
               >
                 {element.type}
               </span>
@@ -161,17 +159,17 @@ export default function MyFirstPost() {
             <div className="h-5/6"></div>
             <div className="flex">
               {PostData.map((element) => (
-                <div className="w-auto flex h-8 ml-2" key={element.img}>
+                <div className="w-auto flex h-8 ml-2" key={element.id}>
                   <Image
                     className="rounded"
                     src={element.img}
                     alt={element.alt}
-                    width={25}
-                    height={18}
+                    width={35}
+                    height={25}
                   />
 
                   <span
-                    className={`bg-slate-800 w-40 ml-1 text-base text-white rounded-full py-1 px-2 mt-1 ${element.style}`}
+                    className={`w-40 ml-1 text-base text-black rounded-full py-1 px-2 mt-1 ${element.style}`}
                   >
                     {element.description}
                   </span>
@@ -191,15 +189,15 @@ export default function MyFirstPost() {
             </h2>
           </div>
 
-          <div className="w-1/4 bg-stone-700 rounded-sm py-4">
-            {postDateNav.map((element, index) => (
-              <>
-                <div key={index} className="w-full flex justify-between">
+          <div className="w-1/4 bg-gray-500 rounded-sm py-4">
+            {postDateNav.map((element) => (
+              <div key={element.id}>
+                <div className="w-full flex justify-between">
                   <h3 className="ml-4 text-white">{element.option}</h3>
                   <span className="size-4 mr-2  text-white">→</span>
                 </div>
                 <div className="w-auto mx-4 h-[1px] bg-black my-2" />
-              </>
+              </div>
             ))}
           </div>
         </section>
