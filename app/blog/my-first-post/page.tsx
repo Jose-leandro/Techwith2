@@ -58,16 +58,16 @@ const PostData: PostDate[] = [
 
 const postDateNav = [
   { id: 1, option: "Introduction" },
-  { id: 2, option: "advantes" },
-  { id: 3, option: "Desvatens" },
+  { id: 2, option: "Advantages" },
+  { id: 3, option: "Disadvantages" },
   { id: 4, option: "Conclusion" },
 ];
-
 
 export default function MyFirstPost() {
   return (
     <>
       <Head>
+        <title>Why JavaScript Remains One of the Most Powerful Languages in 2025</title>
         <meta
           name="description"
           content="Discover why JavaScript remains one of the most powerful programming languages. Learn its importance and how it shapes modern web development."
@@ -106,13 +106,14 @@ export default function MyFirstPost() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "BlogPosting",
-              headline: "My First Post",
-              description: "Short summary...",
+              headline: "Why JavaScript Remains One of the Most Powerful Languages in 2025",
+              description:
+                "Discover why JavaScript remains one of the most powerful programming languages. Learn its importance and how it shapes modern web development.",
               author: {
                 "@type": "Person",
                 name: "José Leandro",
               },
-              datePublished: "0000-00-00",
+              datePublished: "2025-04-25",
             }),
           }}
         />
@@ -120,89 +121,237 @@ export default function MyFirstPost() {
 
       <Header />
 
-      <main>
-        <section className="flex justify-end relative h-96">
-          <div>
-            <h1 className="text-4xl font-ibmplex ml-3 w-1/2 absolute top-32 left-12 z-10">
-              Why <span className="font-garamond text-5xl">JavaScript</span>{" "}
-              Remains One of the Most{" "}
-              <span className="font-garamond text-5xl">Powerful</span> Languages
-              in the World
-            </h1>
+      <main className="flex flex-wrap justify-start p-6">
+        {/* Title Section */}
+        <section
+          className="flex flex-col w-full md:w-1/2 h-auto md:h-96 mb-8 md:mb-0"
+          aria-labelledby="post-title"
+        >
+          <h1
+            id="post-title"
+            className="text-4xl font-ibmplex ml-3 leading-tight"
+          >
+            Why <span className="font-garamond text-5xl">JavaScript</span>{" "}
+            Remains One of the Most{" "}
+            <span className="font-garamond text-5xl">Powerful</span> Languages
+            in the World (In 2025)
+          </h1>
 
-            <p className="mt-1 absolute top-56 left-12 w-1/2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos iure
-              a nihil, fugiat officia mollitia deserunt ipsum? Impedit numquam
-              nesciunt eius ullam magnam minima obcaecati, ad, expedita fugit
-              tempore voluptatum.
-            </p>
+          <div className="flex my-2 items-center" role="note" aria-label="Survey source">
+            <div className="w-[2px] h-6 bg-gray-900 mr-3"></div>
+            <span className="text-cyan-600 font-semibold">
+              Based on Stack Overflow’s 2024 Developer Survey
+            </span>
+          </div>
 
-            {TypeOfPost.map((element) => (
+          <nav aria-label="Post categories" className="flex gap-4 flex-wrap mt-2">
+            {TypeOfPost.map(({ id, type }) => (
               <span
-                key={element.id}
-                className={`className=" bg-slate-600 text-white rounded-full py-1 px-2 mt-1 mx-4 absolute top-72 ${element.left} `}
+                key={id}
+                className="bg-slate-600 text-white rounded-full py-1 px-3 text-sm"
               >
-                {element.type}
+                {type}
               </span>
             ))}
-          </div>
-
-          <Image
-            className="z-0 absolute top-5 right-16"
-            src="/img/Strellar.png"
-            width={400}
-            height={350}
-            alt="Image for the blog post"
-          />
-
-          <div className="w-[400px] h-[400px] mr-12 flex flex-col justify-evenly">
-            <div className="h-5/6"></div>
-            <div className="flex">
-              {PostData.map((element) => (
-                <div className="w-auto flex h-8 ml-2" key={element.id}>
-                  <Image
-                    className="rounded"
-                    src={element.img}
-                    alt={element.alt}
-                    width={35}
-                    height={25}
-                  />
-
-                  <span
-                    className={`w-40 ml-1 text-base text-black rounded-full py-1 px-2 mt-1 ${element.style}`}
-                  >
-                    {element.description}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
+          </nav>
         </section>
 
-        <section className="flex justify-evenly mt-12">
-          <div className="w-1/2">
-            <h2>
-              So, we are in 2025, and JavaThe scrip continues for years and
-              years as one of the most popular and desired languages for learn
-              and choosing for the life of Millions of developers around the
-              world, this shows the Dimensions of JavaScript.
-            </h2>
-          </div>
+        {/* Intro Text Section */}
+        <section
+          className="flex flex-col w-full md:w-2/5 text-lg leading-relaxed"
+          aria-label="Introduction"
+        >
+          <p className="mb-4">
+            As we step into 2025, JavaScript continues to dominate the tech world.
+            Year after year, it remains one of the most popular and desirable programming
+            languages among developers.
+          </p>
 
-          <div className="w-1/4 bg-gray-500 rounded-sm py-4">
-            {postDateNav.map((element) => (
-              <div key={element.id}>
-                <div className="w-full flex justify-between">
-                  <h3 className="ml-4 text-white">{element.option}</h3>
-                  <span className="size-4 mr-2  text-white">→</span>
-                </div>
-                <div className="w-auto mx-4 h-[1px] bg-black my-2" />
-              </div>
-            ))}
-          </div>
+          <p className="mb-4">
+            Millions of developers worldwide rely on it to build everything from websites
+            to mobile apps and desktop applications. This ongoing popularity shows the
+            true scale and impact of JavaScript.
+          </p>
+
+          <p>
+            I’m one of those developers. JavaScript is the first (and only) language I’ve
+            truly learned and used daily. Over the last four years, I’ve developed projects
+            using it — and I genuinely enjoy working with this language.
+          </p>
+
+          <p className="mt-4">
+            So, what makes JavaScript so powerful? Let’s take a closer look at its advantages
+            and disadvantages.
+          </p>
+        </section>
+
+        {/* Advantages Section */}
+        <section
+          className="flex justify-start flex-col w-full mt-12 text-lg max-w-4xl"
+          aria-labelledby="advantages-heading"
+        >
+          <h2 id="advantages-heading" className="text-xl font-semibold mb-3">
+            🔼 Advantages of JavaScript
+          </h2>
+          <ol className="list-decimal list-inside space-y-4">
+            <li>
+              <strong>Compatible with All Browsers:</strong> JavaScript is supported by
+              all modern web browsers, which means your code will run almost anywhere
+              without extra setup.
+            </li>
+            <li>
+              <strong>Strong Community & Industry Support:</strong> JavaScript is backed by
+              major tech companies such as Meta (React.js) and Google (Angular). Many
+              startups and enterprises use JavaScript tools daily, providing a rich ecosystem.
+            </li>
+            <li>
+              <strong>Ubiquity on the Web:</strong> JavaScript powers everything from
+              interactive web pages to full-stack applications (thanks to Node.js). It’s
+              nearly impossible to browse the web without encountering JavaScript.
+            </li>
+            <li>
+              <strong>Open Source:</strong> JavaScript is maintained by a global community,
+              making it dynamic and constantly evolving.
+            </li>
+            <li>
+              <strong>Rich Interfaces:</strong> Enables developers to build interactive
+              user interfaces such as carousels, dropdowns, real-time updates, and more.
+            </li>
+          </ol>
+        </section>
+
+        {/* Disadvantages Section */}
+        <section
+          className="flex flex-col w-full mt-12 text-lg"
+          aria-labelledby="disadvantages-heading"
+        >
+          <h2 id="disadvantages-heading" className="text-xl font-semibold mb-3">
+            🔽 Disadvantages of JavaScript
+          </h2>
+          <ol className="list-decimal list-inside space-y-4">
+            <li>
+              <strong>Error Handling Can Break User Experience:</strong> When an error
+              occurs, JavaScript can cause an entire webpage or feature to stop working if
+              not properly managed.
+            </li>
+            <li>
+              <strong>Security Concerns (Client-Side Execution):</strong> Since JavaScript
+              runs on the client side, it can be vulnerable to exploitation by malicious users.
+            </li>
+            <li>
+              <strong>Browser Compatibility Issues:</strong> Different browsers may interpret
+              JavaScript differently, so developers often need to write additional code or
+              use polyfills to ensure consistency.
+            </li>
+          </ol>
+        </section>
+
+        {/* Is It Worth Learning Section */}
+        <section
+          className="flex flex-col w-full mt-12 text-lg"
+          aria-labelledby="worth-learning-heading"
+        >
+          <h3 id="worth-learning-heading" className="font-semibold text-lg mb-3">
+            ✅ Is JavaScript Still Worth Learning in 2025?
+          </h3>
+          <p>
+            Absolutely. As someone who's used JavaScript for over four years building
+            real-world projects, I can confidently say it remains an excellent choice.
+            It powers most of the web and is used for mobile (React Native), desktop
+            (Electron), and backend development (Node.js).
+          </p>
+          <p className="mt-2">
+            JavaScript is relatively easy to learn, versatile, and well-supported —
+            making it ideal for both beginners and experienced developers.
+          </p>
+        </section>
+
+        {/* Personal Perspective Section */}
+        <section
+          className="flex flex-col w-full mt-12 text-lg"
+          aria-labelledby="personal-perspective-heading"
+        >
+          <h4 id="personal-perspective-heading" className="font-semibold text-lg mb-3">
+            💬 My Perspective as a JavaScript Developer
+          </h4>
+          <p>
+            As a developer who has spent years using JavaScript, I want to do everything
+            I can to keep it at the top. Maybe it’s partly my ego — I’ve invested a lot
+            of time and energy into this language — but I genuinely believe in its power.
+          </p>
+          <p className="mt-2">
+            Even with the rise of AI, I see JavaScript not just surviving but evolving.
+            I plan to explore how JavaScript can work with AI — from integrating machine
+            learning APIs to building smart, interactive apps using tools like
+            TensorFlow.js.
+          </p>
+          <p className="mt-2">
+            JavaScript is more than just code to me — it’s how I bring ideas to life.
+            As AI becomes part of every app, I’ll continue using JavaScript to build
+            faster, smarter, and better. The journey isn’t over — it’s just getting more exciting.
+          </p>
+        </section>
+
+        {/* References Section */}
+        <section className="w-full mt-12 mb-12" aria-label="References">
+          <h4 className="font-semibold text-lg mb-3">🔗 References / Sources</h4>
+          <ul className="list-disc list-inside space-y-1 text-cyan-700">
+            <li>
+              <a
+                href="https://survey.stackoverflow.co/2024/technology#most-popular-technologies-language"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-cyan-900"
+              >
+                Stack Overflow 2024 Survey
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.geeksforgeeks.org/advantages-and-disadvantages-of-javascript/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-cyan-900"
+              >
+                GeeksforGeeks - Advantages and Disadvantages of JavaScript
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/pros-and-cons-of-javascript/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-cyan-900"
+              >
+                FreeCodeCamp - Pros and Cons of JavaScript
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://codeinstitute.net/blog/javascript-advantages-disadvantages/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-cyan-900"
+              >
+                CodeInstitute Blog
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://ellow.io/blog/javascript-advantages-disadvantages/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-cyan-900"
+              >
+                Ellow.io Blog
+              </a>
+            </li>
+          </ul>
         </section>
       </main>
+
       <Footer />
     </>
   );
 }
+
