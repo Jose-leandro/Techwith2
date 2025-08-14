@@ -19,7 +19,7 @@ export default function Packages() {
     analytics: false,
   });
 
-  const togglePackage = (packageName) => {
+  const togglePackage = (packageName: string) => {
     setPackages((prev) => ({
       essencial: false,
       profissional: false,
@@ -28,7 +28,7 @@ export default function Packages() {
     }));
   };
 
-  const handleAddonToggle = (addonKey, priceIncrease) => {
+  const handleAddonToggle = (addonKey: string, priceIncrease: number) => {
     setSelectedAddons((prev) => {
       const isCurrentlySelected = prev[addonKey];
       const updated = { ...prev, [addonKey]: !isCurrentlySelected };
