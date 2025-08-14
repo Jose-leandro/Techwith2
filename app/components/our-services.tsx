@@ -1,57 +1,65 @@
-import Image from "next/image";
-import React from "react";
+import { BadgeDollarSign, Megaphone, Send } from 'lucide-react';
 
 export default function OurServices() {
-  const OurServices = [
+  const services = [
     {
       id: 1,
-      title: "Landing Pages",
-      description: "Building responsive and scalable Landing pages.",
-      imageUrl: "/our-services.jpg",
+      title: 'Landing Pages de Venda',
+      description:
+        'Páginas otimizadas para conversão de cursos e infoprodutos, com design estratégico e copy persuasiva.',
+      icone: BadgeDollarSign,
+    },
+    {
+      id: 2,
+      title: 'Páginas de Captura de Leads',
+      description:
+        'Construa listas qualificadas de potenciais alunos com formulários e materiais gratuitos.',
+      icone: Send,
+    },
+    {
+      id: 3,
+      title: 'Lançamentos e Campanhas',
+      description:
+        'Landing pages estratégicas para lançamentos e promoções, focadas em conversão rápida.',
+      icone: Megaphone,
     },
   ];
 
   return (
-    <section className="bg-gray-100 mt-10 mb-10 py-12">
-      <div className="flex flex-col ml-3 md:flex md:flex-row md:justify-around md:items-center  lg:ml-0">
-        <h2 className="text-4xl font-abril mt-5 ml-3 mb-5  text-gray-800 lg:text-7xl lg:mb-0">
-          Our{" "}
-          <span className="text-5xl font-abril4 lg:text-7xl ">Services</span>
+    <section className="bg-white mt-10 mb-10 py-12">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center px-5 lg:px-20">
+        <h2 className="text-6xl font-abril font-bold text-gray-800 mb-5 md:mb-0">
+          Nossos Serviços
         </h2>
 
-        <button className="ml-5 rounded-sm h-auto w-1/2 mt-2 mb-6 text-xl px-1 py-1 bg-zinc-400 text-black md:w-72 lg:px-3 lg:py-3 lg:text-2xl lg:mt-0 lg:mb-0">
-          Get US Services
+        <button className="rounded-md h-auto px-4 py-2 text-xl bg-blue-600 text-white hover:bg-blue-700 transition w-1/2 md:w-72">
+          Pegar nossos serviços
         </button>
       </div>
 
-      <p className="mt-2 ml-7 mb-4  text-gray-800">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia inventore
-        atque libero nisi quisquam vitae ipsam.
+      <p className="mt-4 px-5 text-gray-600 max-w-3xl">
+        Especializados em infoprodutos e cursos online, criamos landing pages que convertem,
+        capturam leads e potencializam lançamentos.
       </p>
 
-      <div className="flex justify-around mt-6 mb-3">
-        {OurServices.map((service) => (
-          <div
-            key={service.id}
-            className="bg-gray-200 rounded-2xl px-6 py-7 w-11/12 mb-2 h-auto flex-col items-start justify-evenly lg:flex lg:flex-row lg:w-auto"
-          >
-            <Image
-              src={service.imageUrl}
-              alt={service.title}
-              className="w-3/4 lg:w-[450px]"
-              width={450}
-              height={350}
-            />
+      <div className="flex flex-col lg:flex-row justify-around mt-10 gap-8 px-5 lg:px-20">
+        {services.map((service) => {
+          const IconComponent = service.icone;
+          return (
+            <div
+              key={service.id}
+              className="bg-white shadow-md border border-gray-200 rounded-2xl flex flex-col lg:flex-row items-start p-6 w-full lg:w-1/4"
+            >
+              <IconComponent className="w-20 h-20 text-blue-600 mb-4" />
 
-            <div className="flex flex-col justify-evenly items-start ml-5">
-              <h3 className="mt-1 text-3xl  text-gray-800">{service.title}</h3>
-              <p className="text-base my-3 mt-4 mb-2  text-gray-800">
-                {service.description}
-              </p>
-              <button className="text-gray-800">Learn More {">"}</button>
+              <div className="flex flex-col mt-4 lg:mt-0 lg:ml-5">
+                <h3 className="text-xl font-bold text-gray-800">{service.title}</h3>
+                <p className="text-gray-600 mt-2">{service.description}</p>
+                <button className="mt-4 text-blue-600 hover:underline">Saiba mais &gt;</button>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
