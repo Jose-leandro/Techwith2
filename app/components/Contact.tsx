@@ -1,111 +1,117 @@
-import React from "react";
+import { Instagram, Linkedin, MessageCircle } from 'lucide-react';
 
-const contacts = [
+const contatos = [
   {
-    typeContact: "Instagram",
-    howContact: "contact@techwith2.com",
-    conect: "Send One Messagem",
-    href: "",
+    id: 1,
+    tipo: 'Instagram',
+    info: '@tech_with_2',
+    acao: 'Enviar mensagem no Instagram',
+    href: 'https://www.instagram.com/tech_with_2/',
+    icon: Instagram,
   },
   {
-    typeContact: "WhatsApp",
-    howContact: "+55 11 91234-5678",
-    conect: "Chat on WhatsApp",
-    href: "https://wa.me/5511912345678",
+    id: 2,
+    tipo: 'WhatsApp',
+    info: '+55 88 9955-5985',
+    acao: 'Conversar pelo WhatsApp',
+    href: 'https://wa.me/558899555985',
+    icon: MessageCircle,
   },
   {
-    typeContact: "LinkedIn",
-    howContact: "linkedin.com/company/techwith2",
-    conect: "Visit LinkedIn",
-    href: "https://linkedin.com/company/techwith2",
+    id: 3,
+    tipo: 'LinkedIn',
+    info: 'TechWith2',
+    acao: 'Visitar nosso LinkedIn',
+    href: 'https://www.linkedin.com/company/techwith-2/',
+    icon: Linkedin,
   },
 ];
 
-export default function Contact() {
+export default function Contato() {
   return (
-    <section className="mt-10 px-5 bg-gray-300 py-10">
-      <h2 className="text-4xl font-abril mt-5 ml-3  text-gray-800 lg:text-5xl">
-        Contact <span className="text-5xl font-abril lg:text-7xl">Us</span>
-      </h2>
+    <section className="mt-10 px-5 py-10">
+      <h2 className="text-4xl font-abril text-gray-800 lg:text-6xl mb-10">Contato Conosco</h2>
 
-      <div className="flex-col justify-between w-full mt-12 lg:flex-row lg:flex">
-        <div className="flex flex-col flex-wrap w-auto mb-3 gap-6 ml-6 lg:w-1/3 lg:mb-0">
-          <div className="w-full mb-4">
-            <h3 className="text-2xl text-gray-800">
-              Let&apos;s Build Something Great Together
-            </h3>
-          </div>
+      <div className="flex flex-col lg:flex-row gap-10">
+        {/* Contatos */}
+        <div className="flex flex-col gap-6 lg:w-1/3">
+          <h3 className="text-2xl text-gray-800">Vamos Construir Algo Incrível Juntos</h3>
 
-          <div className="md:flex md:w-full lg:flex-col">
-            {contacts.map((contact, index) => (
-              <div
-                key={index}
-                className="flex-1 w-auto border rounded-2xl p-4 shadow-md hover:shadow-lg transition duration-300 md:w-1/3 lg:mt-1 lg:w-4/5"
-              >
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">
-                  {contact.typeContact}
-                </h3>
-                <p className="text-gray-600 mb-4">{contact.howContact}</p>
-                <a
-                  href={contact.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+          <div className="flex flex-col gap-4">
+            {contatos.map((contato) => {
+              const Icon = contato.icon;
+              return (
+                <div
+                  key={contato.id}
+                  className="border rounded-2xl p-5 shadow-md hover:shadow-xl transition duration-300 bg-white flex items-center gap-4"
                 >
-                  {contact.conect}
-                </a>
-              </div>
-            ))}
+                  <Icon className="w-5 h-5 text-blue-600" />
+                  <div>
+                    <h4 className="text-xl mb-1 text-gray-800">{contato.tipo}</h4>
+                    <p className="text-gray-600 mb-3">{contato.info}</p>
+                    <a
+                      href={contato.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+                    >
+                      {contato.acao}
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 
-        <form className="bg-gray-200 p-6 shadow-lg w-auto space-y-4 mt-7 lg:mt-0 lg:w-2/4">
-          <h3 className="text-black text-xl">Send Us a Message</h3>
+        {/* Formulário */}
+        <form className="border hover:shadow-xl transition duration-300 p-6 shadow-lg rounded-xl flex-1 space-y-4">
+          <h3 className="text-xl text-gray-800">Envie Uma Mensagem</h3>
 
           <div className="flex flex-col">
-            <label htmlFor="name" className="text-black mb-1">
-              Name
+            <label htmlFor="nome" className="mb-1 text-gray-700">
+              Nome
             </label>
             <input
               type="text"
-              id="name"
-              name="name"
+              id="nome"
+              name="nome"
               required
-              className="p-2 rounded-md border border-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
 
           <div className="flex flex-col">
-            <label htmlFor="email" className="text-black mb-1">
-              Email
+            <label htmlFor="email" className="mb-1 text-gray-700">
+              E-mail
             </label>
             <input
               type="email"
               id="email"
               name="email"
               required
-              className="p-2 rounded-md border border-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
           </div>
 
           <div className="flex flex-col">
-            <label htmlFor="message" className="text-black mb-1">
-              Message
+            <label htmlFor="mensagem" className="mb-1 text-gray-700">
+              Mensagem
             </label>
             <textarea
-              id="message"
-              name="message"
-              rows={4}
+              id="mensagem"
+              name="mensagem"
+              rows={5}
               required
-              className="p-2 rounded-md border border-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
             ></textarea>
           </div>
 
           <button
             type="submit"
-            className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
           >
-            Send Message
+            Enviar Mensagem
           </button>
         </form>
       </div>
