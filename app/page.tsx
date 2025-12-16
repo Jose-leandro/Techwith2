@@ -53,6 +53,18 @@ export default function Home() {
 
         {/* Author */}
         <meta name="author" content="TechWith2 Team" />
+
+        {/* Google tag (gtag.js)  */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRD9J9JL05"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-KRD9J9JL05');
+          `}
+        </script>
       </Head>
 
       <main>
