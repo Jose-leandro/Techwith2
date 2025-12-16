@@ -6,6 +6,7 @@ import Footer from './components/footer';
 import Header from './components/header';
 import OurServices from './components/our-services';
 import Packages from './components/packages';
+import Script from 'next/script';
 
 export default function Home() {
   return (
@@ -53,18 +54,6 @@ export default function Home() {
 
         {/* Author */}
         <meta name="author" content="TechWith2 Team" />
-
-        {/* Google tag (gtag.js)  */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRD9J9JL05"></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-KRD9J9JL05');
-          `}
-        </script>
       </Head>
 
       <main>
