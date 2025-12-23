@@ -14,7 +14,8 @@ export default function Hero() {
       <div className="flex justify-around items-start w-full mt-12">
         <div className="flex flex-col">
           <a
-            href="#contact"
+            href="https://wa.me/5588999555985"
+            target="_blank"
             className="sm:text-base text-white flex justify-around  px-6 py-3 bg-black hover:bg-blue-900 mb-1 rounded-2xl font-medium shadow-lg transition-all"
           >
             Falar comigo no WhatsApp <ArrowUpRight className="ml-0" />
