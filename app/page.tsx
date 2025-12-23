@@ -7,6 +7,11 @@ import Header from './components/header';
 import OurServices from './components/our-services';
 import Packages from './components/packages';
 import Script from 'next/script';
+import ParaQuemE from './components/paraQuemE';
+import OProbelma from './components/OProbelma';
+import ASolucao from './components/ASolucao';
+import ComoFunciona from './components/comoFunciona';
+import Garantia from './components/Garantia';
 
 export default function Home() {
   return (
@@ -59,10 +64,14 @@ export default function Home() {
       <main>
         <Header />
         <Hero />
-        <AboutUs />
-        <OurServices />
+        <ParaQuemE />
+        <OProbelma />
+        <ASolucao />
+        <ComoFunciona />
         <Packages />
-        <Contact />
+        <Garantia />
+        {/* <OurServices /> */}
+        {/* <Contact /> */}
       </main>
       <Footer />
     </>

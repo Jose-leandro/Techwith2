@@ -1,231 +1,221 @@
 'use client';
+import { Check, X } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Packages() {
   const [packages, setPackages] = useState({
-    essencial: true,
-    profissional: true,
+    basico: true,
+    // profissional: true,
     premium: true,
   });
 
   // Essencial price + addons
-  const [essencialPrice, setEssencialPrice] = useState(125);
-  const [selectedAddons, setSelectedAddons] = useState({
-    security: false,
-    performance: false,
-    seo: false,
-    revisoes: false,
-    entrega: false,
-    analytics: false,
-  });
+  // const [essencialPrice, setEssencialPrice] = useState(600);
+  // const [selectedAddons, setSelectedAddons] = useState({
+  //   security: false,
+  //   // performance: false,
+  //   // seo: false,
+  //   // revisoes: false,
+  //   // entrega: false,
+  //   // analytics: false,
+  // });
 
-  const togglePackage = (packageName: string) => {
-    setPackages((prev) => ({
-      essencial: false,
-      profissional: false,
-      premium: false,
-      [packageName]: prev[packageName] ? true : false, // activate clicked one if it was off
-    }));
-  };
+  // const togglePackage = (packageName: string) => {
+  //   setPackages((prev) => ({
+  //     basico: false,
+  //     // profissional: false,
+  //     premium: false,
+  //     [packageName]: prev[packageName] ? true : false, // activate clicked one if it was off
+  //   }));
+  // };
 
-  const handleAddonToggle = (addonKey: string, priceIncrease: number) => {
-    setSelectedAddons((prev) => {
-      const isCurrentlySelected = prev[addonKey];
-      const updated = { ...prev, [addonKey]: !isCurrentlySelected };
+  // const handleAddonToggle = (addonKey: string, priceIncrease: number) => {
+  //   setSelectedAddons((prev) => {
+  //     const isCurrentlySelected = prev[addonKey];
+  //     const updated = { ...prev, [addonKey]: !isCurrentlySelected };
 
-      setEssencialPrice((currentPrice) =>
-        isCurrentlySelected ? currentPrice - priceIncrease : currentPrice + priceIncrease
-      );
+  //     setEssencialPrice((currentPrice) =>
+  //       isCurrentlySelected ? currentPrice - priceIncrease : currentPrice + priceIncrease
+  //     );
 
-      return updated;
-    });
+  //     return updated;
+  //   });
 
-    togglePackage(addonKey);
-  };
+  //   togglePackage(addonKey);
+  // };
 
   return (
     <div className="flex flex-col items-center gap-8">
       <div className="text-center w-2/3">
-        <h1 className="text-6xl font-abril">
-          Nossos Pacotes de Landing Pages — Design, Estratégia e Resultados
-        </h1>
-        <p className="mt-2 text-base">
-          Pacotes personalizados para elevar sua presença digital e aumentar suas vendas.
-        </p>
+        <h2 className="text-4xl font-extrabold text-gray-800 lg:text-4xl">Preços</h2>
+        <p className="mt-2 text-base">Explore as opções de investimneto atualmente</p>
       </div>
 
-      <span className="text-lg w-3/4 text-center">
+      {/* <span className="text-lg w-3/4 text-center">
         “Quer mais controle e flexibilidade? Monte seu pacote ideal com a TechWith2! Escolha os
         recursos que seu negócio precisa, ajuste seu investimento e crie uma landing page que
         realmente funciona para você.”
-      </span>
+      </span> */}
 
       {/* Packages container */}
       <section className="flex flex-col lg:flex-row gap-6 w-full justify-center">
         {/* ESSENCIAL */}
-        {packages.essencial && (
+        {packages.basico && (
           <div
-            className={`transition-all duration-500 overflow-hidden border border-zinc-700 bg-slate-200 rounded-lg shadow-md
-            ${packages.essencial ? 'w-full max-w-4xl p-8' : 'w-auto p-4'}`}
+            className={`transition-all duration-500 overflow-hidden border border-zinc-700 bg-slate-200 rounded-lg shadow-md w-auto p-4
+           
+            `}
           >
             <div className="flex justify-between items-center">
-              <h2 className="text-xl font-bold">Pacote Essencial</h2>
-              <button
+              <h2 className="text-xl font-bold">LANDING PAGE PADRÃO</h2>
+              {/* <button
                 className="bg-gray-900 text-white px-2 py-1 rounded"
                 onClick={() => togglePackage('essencial')}
               >
-                {packages.essencial ? 'Ver Melhor' : 'Fechar'}
-              </button>
+                {/* {packages.basico ? 'Ver Melhor' : 'Fechar'} */}
+              {/* </button>  */}
             </div>
 
-            <p className="mt-2">Básico, limpo, responsivo e acessível.</p>
-            <h3 className="mb-4">De R$ 125 até R$ 500</h3>
-            <button className="bg-black text-white px-4 py-2 rounded-md">
-              Quero Este Por R$ {essencialPrice}
-            </button>
+            <p className="mt-2">
+              Landing page simples para professores de inglês, focada em clareza da oferta,
+              apresentação profissional e facilidade de contato.
+            </p>
+            {/* <h3 className="mb-4">De R$ 125 até R$ 500</h3> */}
+            <span className="text-4xl font-bold flex flex-col mt-9">
+              R$ 600 à vista <span className="text-xl">Ou 2x de R$ 450</span>{' '}
+            </span>
 
-            <div className="mt-4">
-              <h4 className="font-semibold mb-2">Incluso no preço base (R$ 125):</h4>
-              <ul className="list-disc list-inside mb-4">
-                <li>Layout visual limpo e profissional.</li>
-                <li>Design responsivo para todos os dispositivos.</li>
-                <li>Configuração e implantação básicas.</li>
-                <li>Suporte básico adaptado às suas necessidades.</li>
-                <li>Personalização focada no seu negócio.</li>
-                <li>Transparência e feedback durante todo o desenvolvimento.</li>
+            <button className="bg-black text-white px-4 mt-2 py-2 rounded-md">Quero Este</button>
+
+            <div className="mt-8">
+              <h4 className="font-semibold mb-2">LANDING PAGE PADRÃO INCLUI:</h4>
+              <ul className=" mb-4">
+                <li className="flex">
+                  <Check className="text-blue-600 w-5 h-5  mr-1" /> Design responsivo (celular + PC)
+                </li>
+                <li className="flex">
+                  <Check className="text-blue-600 w-5 h-5  mr-1" />7 seções estruturadas (hero +
+                  sobre + benefícios + depoimentos + preço + FAQ + CTA)
+                </li>
+                <li className="flex">
+                  <Check className="text-blue-600 w-5 h-5  mr-1" />
+                  Copywriting básico focado em conversão
+                </li>
+                <li className="flex">
+                  <Check className="text-blue-600 w-5 h-5  mr-1" />
+                  Integração WhatsApp/Email
+                </li>
+                <li className="flex">
+                  <Check className="text-blue-600 w-5 h-5  mr-1" />1 round ajustes grátis (até 5
+                  mudanças)
+                </li>
+                <li className="flex">
+                  <Check className="text-blue-600 w-5 h-5  mr-1" />
+                  Prazo entrega de 5 dias úteis após envio das informações
+                </li>
+                <li className="flex">
+                  <Check className="text-blue-600 w-5 h-5  mr-1" />
+                  30 dias suporte técnico
+                </li>
+                <li className="flex">
+                  <Check className="text-blue-600 w-5 h-5  mr-1" />
+                  Garantia de qualidade técnica
+                </li>
               </ul>
 
-              <h4 className="font-semibold mb-2">Complementos opcionais:</h4>
-              {[
-                { key: 'security', label: 'Segurança', price: 50 },
-                { key: 'performance', label: 'Performance', price: 60 },
-                { key: 'seo', label: 'SEO', price: 80 },
-                { key: 'revisoes', label: 'Revisões', price: 80 },
-                { key: 'entrega', label: 'Entrega Rápida', price: 50 },
-                { key: 'analytics', label: 'Analytics & Relatórios', price: 15 },
-              ].map((addon) => (
-                <div key={addon.key} className="mb-2">
-                  <span>{addon.label}</span>
-                  <button
-                    className="ml-2 text-sm bg-gray-200 px-2 py-1 rounded"
-                    onClick={() => handleAddonToggle(addon.key, addon.price)}
-                  >
-                    {selectedAddons[addon.key] ? 'Remover' : 'Deseja incluir?'}
-                  </button>
-                </div>
-              ))}
+              <h4 className="font-semibold mb-2">LANDING PAGE PADRÃO NÂO INCLUI:</h4>
+              <ul className=" mb-4">
+                <li className="flex">
+                  <X className="text-red-600 w-5 h-5  mr-1" /> Hospedagem (Serviço separado)
+                </li>
+                <li className="flex">
+                  <X className="text-red-600 w-5 h-5  mr-1" /> Domínio (Serviço separado)
+                </li>
+                <li className="flex">
+                  <X className="text-red-600 w-5 h-5  mr-1" /> Ads/tráfego (cliente contrata)
+                </li>
+                <li className="flex">
+                  <X className="text-red-600 w-5 h-5  mr-1" /> SEO (serviço separado)
+                </li>
+              </ul>
+
+              <h4 className="font-semibold mb-2">SUPORTE OPCIONAL (R$97/mês):</h4>
+              <ul className=" mb-4">
+                <li className="flex">
+                  <Check className="text-blue-600 w-5 h-5  mr-1" />
+                  Hospedagem da landing page
+                </li>
+                <li className="flex">
+                  <Check className="text-blue-600 w-5 h-5  mr-1" />
+                  Manutenção técnica (site no ar)
+                </li>
+                <li className="flex">
+                  <Check className="text-blue-600 w-5 h-5  mr-1" /> Pequenos ajustes de texto (1–2
+                  por mês)
+                </li>
+                <li className="flex">
+                  <Check className="text-blue-600 w-5 h-5  mr-1" /> Ajustes de botão / WhatsApp /
+                  links
+                </li>
+                <li className="flex">
+                  <Check className="text-blue-600 w-5 h-5  mr-1" /> Suporte via WhatsApp
+                </li>
+                <li className="flex">
+                  <Check className="text-blue-600 w-5 h-5  mr-1" /> Backup + segurança básica
+                </li>
+                <li className="flex">
+                  <Check className="text-blue-600 w-5 h-5  mr-1" /> Mínimo 3 meses
+                </li>
+              </ul>
             </div>
           </div>
         )}
 
-        {/* PROFISSIONAL */}
-
-        {packages.profissional && (
-          <div
-            className={`transition-all duration-500 overflow-hidden border border-zinc-700 bg-slate-300 rounded-lg shadow-md
-    ${packages.profissional ? 'w-full max-w-4xl p-8 visible' : 'w-auto p-4'}`}
-          >
-            <div className="flex justify-between items-center">
-              <h2 className="text-xl font-bold">Pacote Profissional</h2>
-              <button
-                className="bg-gray-900 text-white px-2 py-1 rounded"
-                onClick={() => togglePackage('profissional')}
-              >
-                {packages.profissional ? 'Fechar' : 'Ver Melhor'}
-              </button>
-            </div>
-
-            <p className="mt-2">Design refinado, otimização de conversão e automações simples.</p>
-            <h3 className="mb-4">De R$ 550 até R$ 1.000</h3>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-md">Quero Este</button>
-
-            <div className="mt-4">
-              <h4 className="font-semibold mb-2">Incluso no preço base (R$ 550):</h4>
-              <ul className="list-disc list-inside mb-4">
-                <li>Layout refinado alinhado à identidade da marca.</li>
-                <li>Otimização básica para conversão (CTAs claros e layout estratégico).</li>
-                <li>Integração de formulários com e-mail.</li>
-                <li>Melhoria de usabilidade e navegação.</li>
-                <li>Suporte e personalização avançada.</li>
-                <li>Transparência e feedback contínuo.</li>
-              </ul>
-
-              <h4 className="font-semibold mb-2">Complementos opcionais:</h4>
-              {[
-                { key: 'security', label: 'Segurança avançada', price: 50 },
-                { key: 'performance', label: 'Performance intermediária', price: 60 },
-                { key: 'seo', label: 'SEO intermediário', price: 40 },
-                { key: 'revisoes', label: 'Revisões adicionais', price: 60 },
-                { key: 'entrega', label: 'Entrega rápida (2 dias)', price: 200 },
-                { key: 'analytics', label: 'Analytics completo', price: 30 },
-              ].map((addon) => (
-                <div key={addon.key} className="mb-2">
-                  <span>{addon.label}</span>
-                  <button
-                    className="ml-2 text-sm bg-gray-200 px-2 py-1 rounded"
-                    onClick={() => handleAddonToggle(addon.key, addon.price)}
-                  >
-                    {selectedAddons[addon.key] ? 'Remover' : 'Deseja incluir?'}
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* PREMIUM */}
+        {/* PREMIUM
         {packages.premium && (
           <div
-            className={`transition-all duration-500 overflow-hidden border border-zinc-700 bg-stone-200 rounded-lg shadow-md
-    ${packages.profissional ? 'w-full max-w-4xl p-8 visible' : ' w-auto p-4'}`}
+            className={`transition-all duration-500 overflow-hidden border border-zinc-700 bg-stone-200 rounded-lg shadow-md w-[30%] p-4
+    
+    `}
           >
             <div className="flex justify-between items-center">
-              <h2 className="text-xl font-bold">Pacote Premium</h2>
-              <button
-                className="bg-gray-900 text-white px-2 py-1 rounded"
-                onClick={() => togglePackage('premium')}
-              >
-                {packages.premium ? 'Fechar' : 'Ver Melhor'}
-              </button>
+              <h2 className="text-xl font-bold">Serviço de Assinatura Mensal</h2>
             </div>
 
-            <p className="mt-2">Design exclusivo, integrações avançadas e otimização contínua.</p>
-            <h3 className="mb-4">De R$ 1.500 até R$ 2.500</h3>
-            <button className="bg-black text-white px-4 py-2 rounded-md">Quero Este</button>
+            <p className="mt-2 ">
+              Para manter tudo no ar, atualizado e funcionando, existe uma assinatura de R$ 97/mês,
+              que cobre hospedagem, manutenção e suporte.
+            </p>
+            <span className="text-4xl font-bold flex flex-col mt-9">R$ 97/mês</span>
+            <button className="bg-black text-white px-4 py-2 rounded-md mt-8">Quero Este</button>
 
             <div className="mt-4">
-              <h4 className="font-semibold mb-2">Incluso no preço base (R$ 1.500):</h4>
-              <ul className="list-disc list-inside mb-4">
-                <li>Design exclusivo e altamente personalizado.</li>
-                <li>Integrações com CRM, e-mail marketing e pagamentos online.</li>
-                <li>Testes A/B básicos para otimização contínua.</li>
-                <li>SEO técnico avançado e performance máxima.</li>
-                <li>Suporte completo e 30 dias de acompanhamento.</li>
-                <li>Personalização estratégica para seu negócio.</li>
-              </ul>
-
-              <h4 className="font-semibold mb-2">Complementos opcionais:</h4>
-              {[
-                { key: 'security', label: 'Segurança avançada', price: 100 },
-                { key: 'performance', label: 'Performance máxima', price: 100 },
-                { key: 'seo', label: 'SEO completo', price: 100 },
-                { key: 'revisoes', label: 'Revisões adicionais', price: 80 },
-                { key: 'entrega', label: 'Entrega super rápida (1 dia)', price: 400 },
-                { key: 'analytics', label: 'Analytics avançado + relatórios', price: 50 },
-              ].map((addon) => (
-                <div key={addon.key} className="mb-2">
-                  <span>{addon.label}</span>
-                  <button
-                    className="ml-2 text-sm bg-gray-200 px-2 py-1 rounded"
-                    onClick={() => handleAddonToggle(addon.key, addon.price)}
-                  >
-                    {selectedAddons[addon.key] ? 'Remover' : 'Deseja incluir?'}
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+              {/* <h4 className="font-semibold mb-2">Incluso no preço base (R$ 1.500):</h4> */}
+        {/* <ul className=" mb-4">
+          <li className="flex">
+            <Check className="text-blue-600 w-5 h-5  mr-1" /> Hospedagem da landing page
+          </li>
+          <li className="flex">
+            <Check className="text-blue-600 w-5 h-5  mr-1" />
+            Manutenção técnica (site no ar)
+          </li>
+          <li className="flex">
+            <Check className="text-blue-600 w-5 h-5  mr-1" />
+            Pequenos ajustes de texto (1–2 por mês)
+          </li>
+          <li className="flex">
+            <Check className="text-blue-600 w-5 h-5  mr-1" />
+            Ajustes de botão / WhatsApp / links
+          </li>
+          <li className="flex">
+            <Check className="text-blue-600 w-5 h-5  mr-1" />
+            Suporte via WhatsApp
+          </li>
+          <li className="flex">
+            <Check className="text-blue-600 w-5 h-5  mr-1" />
+            Backup + segurança básica
+          </li>
+        </ul> */}
       </section>
     </div>
   );
